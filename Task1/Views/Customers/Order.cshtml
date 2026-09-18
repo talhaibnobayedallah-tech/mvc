@@ -1,0 +1,22 @@
+
+    @if (ViewBag.Error != null){
+    <h3 style="color:red"> @ViewBag.Error </h3>
+    }
+
+<form asp-action="Saving" asp-controller="Customers">
+
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input name="name" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="Discription">Discription</label>
+    <input name="discription" type="text" class="form-control" >
+  </div>
+    	
+    <div class="form-group">
+    <label for="Price">Price</label>
+    <input name="price" type="text" class="form-control" >
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

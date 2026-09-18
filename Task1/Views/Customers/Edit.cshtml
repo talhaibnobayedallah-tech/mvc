@@ -1,0 +1,25 @@
+@using Task1.Models.DAL.Entities
+@model Customer
+    @if (ViewBag.Notfound != null){
+    <h3 style="color:red"> @ViewBag.Notfound </h3>
+    }
+    else{
+
+<form asp-action="SaveEdit" asp-controller="Customers">
+ <input type="hidden" asp-for="Id"/>
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input asp-for="Name" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="Discription">Discription</label>
+    <input asp-for="OrderDiscription" type="text" class="form-control" >
+  </div>
+    	
+    <div class="form-group">
+    <label for="Price">Price</label>
+    <input asp-for="OrderPrice" type="text" class="form-control" >
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+}
